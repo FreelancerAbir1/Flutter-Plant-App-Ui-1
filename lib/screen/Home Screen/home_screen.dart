@@ -10,6 +10,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).orientation;
+    if (size == Orientation.portrait) {
+      return Text('hellow world how about you');
+    }
     return Scaffold(
       drawer: const Drawer(),
       appBar: buildAppBar(
